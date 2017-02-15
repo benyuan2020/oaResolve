@@ -38,31 +38,16 @@
                         <div class="table-responsive">
                             <table id="leaseAuditListTable" class="table table-hover table-striped"
 								data-toggle="table" data-side-pagination="server"
-							    data-pagination="true" data-query-params="searchKey" data-page-number="1"
-								data-url="/midai/lease/order/businessList.json" data-page-size="12"
+							    data-pagination="true" data-page-number="1"
+								data-page-size="12"
 								data-show-pagination-detail="false" data-pagination-first-text="First"
 								data-pagination-pre-text="上一页" data-pagination-next-text="下一页" 	data-pagination-loop="false"
 								data-pagination-last-text="Last" data-page-list="[12,24,36]"
 								class="table table-hover table-striped table-no-bordered main-table"
-								data-method="post"
+								data-method="get"
                             >
                                 <thead>
-									<tr>
-										<th data-field="orderId" data-align="left"
-											style="color: #276cb0">进件编号</th>
-										<th data-field="clientName" data-align="left">进件人</th>
-										<th data-field="createTime" data-formatter="timeTpye"
-											data-align="left" style="color: #276cb0">进件时间</th>
-										<th data-field="orderType" data-align="left">进件类型</th>
-										<th data-field="state"
-											data-align="left">进件状态</th>
-										<th data-field="carType" data-align="left">资质</th>
-										<th data-field="note"  data-formatter="leaseNoteFormatter"
-											data-align="left">备注</th>
-										<th data-field=""
-											data-formatter="actionFormatter" data-events="actionEvents"
-											data-align="left">操作</th>
-									</tr>
+									
 								</thead>
                             </table>
                         </div>
