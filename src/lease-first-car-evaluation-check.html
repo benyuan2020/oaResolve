@@ -1,0 +1,510 @@
+<!--凯凯-->
+<div class="container-fluid">
+    <!--START 一级车评-->
+    <form action="" method="" id="lease-first-car-evaluation">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">车辆基本信息</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <!--客户姓名-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>客户姓名</label>
+
+                                    <div class="controls">
+                                        <input type="text" class="form-control" name="clientInfo.clientName" id="clientName" disabled/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--证件号码-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>证件号码</label>
+
+                                    <div class="controls">
+                                        <input type="text" class="form-control" name="clientInfo.idNum" id="idNum" disabled/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--联系电话-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>联系电话</label>
+
+                                    <div class="controls">
+                                        <input type="text" class="form-control" name="clientInfo.phoneNum" id="phoneNum" disabled/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--品牌型号-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>品牌型号 <span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <input type="text" class="form-control" name="car.model" id="model"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!--表显里程-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>表显里程<span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <div class="input-group m-b">
+                                            <input type="text" class="form-control" name="car.mileage" id="mileage"/>
+                                            <span class="input-group-addon">公里</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--出厂日期-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>出厂日期<span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <div class="input-group date time_year mb-lg" id="factoryDay">
+                                            <input type="text" class="form-control data-show2" placeholder="出厂日期" name="factoryDay"
+                                                   aria-describedby="sizing-addon1"/>
+                                             <span class="input-group-addon">
+                                                 <span class="fa-calendar fa"></span>
+                                             </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--使用性质-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>使用性质</label>
+
+                                    <div class="controls">
+                                        <input type="text" class="form-control" name="car.useProperty" id="useProperty"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--初次登记日-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>初次登记日<span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <div class="input-group date my_date mb-lg" id="registDay">
+                                            <input type="text" class="form-control data-show" placeholder="初次登记日" name="car.registDay"
+                                                   aria-describedby="sizing-addon1"/>
+                                             <span class="input-group-addon">
+                                                 <span class="fa-calendar fa"></span>
+                                             </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row clearfix">
+                            <!--商险到期日-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>商险到期日<span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <div class="input-group date my_date mb-lg" id="commercialDay">
+                                            <input type="text" class="form-control data-show" placeholder="商险到期日" name="car.commercialDay"
+                                                   aria-describedby="sizing-addon1"/>
+                                             <span class="input-group-addon">
+                                                 <span class="fa-calendar fa"></span>
+                                             </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--交险到期日-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>交险到期日<span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <div class="input-group date my_date mb-lg" id="strongDay">
+                                            <input type="text" class="form-control data-show" placeholder="交险到期日" name="car.strongDay"
+                                                   aria-describedby="sizing-addon1"/>
+                                             <span class="input-group-addon">
+                                                 <span class="fa-calendar fa"></span>
+                                             </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--年检到期日-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>年检到期日<span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <div class="input-group date my_date mb-lg" id="annualDay">
+                                            <input type="text" class="form-control data-show2" placeholder="年检到期日" name="annualDay"
+                                                   aria-describedby="sizing-addon1"/>
+                                             <span class="input-group-addon">
+                                                 <span class="fa-calendar fa"></span>
+                                             </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--变更记录-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>变更记录</label>
+
+                                    <div class="controls">
+                                        <input type="text" class="form-control" name="car.otherLog" id="otherLog"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!--车辆标配-->
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <label>车辆标配<span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <input type="text" class="form-control" name="car.standConfig" id="standConfig"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <!--车辆个性化配置-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>车辆个性化配置</label>
+
+                                    <div class="controls">
+                                        <input type="text" class="form-control" name="car.selfConfig" id="selfConfig"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--燃油类型-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>燃油类型 <span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <select class="form-control" name="car.fuel" id="fuel">
+                                            <option value="0" selected="selected">汽油</option>
+                                            <option value="1">柴油</option>
+                                            <option value="2">电动</option>
+                                            <option value="3">油电混合</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--发动机号-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>发动机号 <span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <input type="text" class="form-control" placeholder="发动机号" name="car.engineNum" id="engineNum"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--车辆VIN码-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>车辆VIN码 <span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <input type="text" class="form-control" placeholder="车辆VIN码" name="car.vinNum" id="vinNum"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!--车牌号码-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>车牌号码 <span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <input type="text" class="form-control" name="car.licenseNum" id="licenseNum"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--车辆原色-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>车辆原色 <span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <input type="text" class="form-control" name="car.primaryColors" id="primaryColors"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--车辆颜色-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>车辆颜色 <span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <input type="text" class="form-control" placeholder="车辆颜色" name="car.colors" id="colors"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--是否改装-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>是否改装<span class="required-start"> *</span></label>
+
+                                    <div class="controls controls-radio">
+                                        <label class="radio-inline c-radio">
+                                            <input type="radio" data-toggle="radio" data-content="是" value="1" name="car.refit" id="hasChild"/>
+                                            <span class="fa fa-circle"></span>是</label>
+                                        <label class="radio-inline c-radio">
+                                            <input type="radio" data-toggle="radio" data-content="否" value="0" name="car.refit" checked/>
+                                            <span class="fa fa-circle"></span>否</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!--车辆类型-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>车辆类型<span class="required-start"> *</span></label>
+
+                                    <div class="controls controls-radio">
+                                        <label class="radio-inline c-radio">
+                                            <input type="radio" data-toggle="radio" data-content="本地车" name="car.carType" checked id="carType" value="0"/>
+                                            <span class="fa fa-circle"></span>本地车</label>
+                                        <label class="radio-inline c-radio">
+                                            <input type="radio" data-toggle="radio" data-content="外地车" name="car.carType" value="1"/>
+                                            <span class="fa fa-circle"></span>外地车</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--车辆排放标准-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>车辆排放标准<span class="required-start"> *</span></label>
+
+                                    <div class="controls controls-radio">
+                                        <label class="radio-inline c-radio">
+                                            <input type="radio" data-toggle="radio" data-content="国3" checked name="car.discharge" value="0"/>
+                                            <span class="fa fa-circle"></span>国3</label>
+                                        <label class="radio-inline c-radio">
+                                            <input type="radio" data-toggle="radio" data-content="国4" name="car.discharge" value="1"/>
+                                            <span class="fa fa-circle"></span>国4</label>
+                                        <label class="radio-inline c-radio">
+                                            <input type="radio" data-toggle="radio" data-content="国5" name="car.discharge" value="2"/>
+                                            <span class="fa fa-circle"></span>国5</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">融资其他相关资料</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <!--车证材料-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>车证材料<span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" readonly placeholder="请上传" aria-describedby="sizing-addon1"/>
+                                            <span class="input-group-addon oss-showModal" id="oss-车证材料" data-dir="车证材料">
+                                                <span class="fa fa-eye"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--车辆照片-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>车辆照片<span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" readonly placeholder="请上传" aria-describedby="sizing-addon1"/>
+                                            <span class="input-group-addon oss-showModal" id="oss-车辆照片" data-dir="车辆照片"><span
+                                                    class="fa fa-eye"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--车辆保险-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>车辆保险</label>
+
+                                    <div class="controls">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" readonly placeholder="请上传" aria-describedby="sizing-addon1"/>
+                                            <span class="input-group-addon oss-showModal" id="oss-车辆保险" data-dir="车辆保险"><span
+                                                    class="fa fa-eye"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--经营地材料-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>经营地材料</label>
+
+                                    <div class="controls">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" readonly placeholder="请上传" aria-describedby="sizing-addon1"/>
+                                            <span class="input-group-addon oss-showModal" id="oss-经营地材料" data-dir="经营地材料"><span
+                                                    class="fa fa-eye"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!--车辆产权照片-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>车辆产权照片</label>
+
+                                    <div class="controls">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" readonly placeholder="请上传" aria-describedby="sizing-addon1"/>
+                                            <span class="input-group-addon oss-showModal" id="oss-车辆产权照片" data-dir="车辆产权照片"><span
+                                                    class="fa fa-eye"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">车辆基本评估意见</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <!--车辆静态评估-->
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <label>车辆静态评估<span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                            <textarea rows="6" class="form-control" name="orderEvaluate.staticInfo" id="staticInfo"
+                                                      style="resize:none;"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!--车辆动态评估-->
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <label>车辆动态评估<span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                            <textarea rows="6" class="form-control" name="orderEvaluate.dynamicInfo" id="dynamicInfo"
+                                                      style="resize:none;"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!--网查价格-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>网查价格</label>
+
+                                    <div class="controls">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" data-money="money" name="orderEvaluate.netPrice" id="netPrice"/>
+                                            <span class="input-group-addon">元</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--市场价格-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>市场价格 <span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" data-money="money" name="orderEvaluate.marketPrice" id="marketPrice"/>
+                                            <span class="input-group-addon">元</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--车辆评估价-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>车辆评估价 <span class="required-start">*</span></label>
+
+                                    <div class="controls">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" data-money="money" name="orderEvaluate.evaluationPrice"
+                                                   id="evaluationPrice"/>
+                                            <span class="input-group-addon">元</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--牌照价值-->
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>牌照价值</label>
+
+                                    <div class="controls">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" data-money="money" name="orderEvaluate.licensePrice" id="licensePrice"/>
+                                            <span class="input-group-addon">元</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!--备注-->
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <label>备注</label>
+
+                                    <div class="controls">
+                                        <textarea rows="6" class="form-control" name="orderEvaluate.note" id="note" style="resize:none;"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <ul class="pager">
+                <li>
+                    <input type="button" id="save" class="btn btn-primary" value="保存">
+                    <button type="submit" id="formCommit" class="btn btn-primary ">确认提交</button>
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>

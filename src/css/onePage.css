@@ -1,0 +1,44 @@
+.content-header .urlBlock{
+	width: 165px;
+	height: 48px;
+	line-height: 48px;
+	border-right:1px solid #d9d9d9;
+	padding:0 0px;
+	float: left;
+	cursor: pointer;
+	overflow: hidden;
+	background-color: #e1e2e6;
+	color: #a6a6a6;
+}
+.content-header .urlBlock.active{
+	/*box-shadow: 0 0 10px #ae0000 inset;*/
+	background-color: #f1f1f1;
+}
+.content-header .urlBlock.active span.closePage{
+	background-color: #fff;
+}
+.content-header .urlBlock span{
+	margin: 0;
+	padding: 0;
+}
+.content-header .urlTitle{
+	width:134px;
+	float:left;
+	text-align: center;
+}
+.content-header .urlBlock span.closePage {
+	font-size: 24px;
+	display: inline-block;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	margin-top: 9px;
+	line-height: 30px;
+	cursor: pointer;
+	float: left;
+	background-color: #eaebee;
+}
+.content-header .urlBlock:hover span.closePage{
+	background-color: #ee3f20;
+	color: #fff;
+}

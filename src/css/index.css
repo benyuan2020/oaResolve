@@ -1,0 +1,83 @@
+.wrapper .main-content{
+	height: 100%;
+	padding: 0px;
+	padding-top: 32px;
+	overflow: auto;
+}
+.wrapper .main-content .content-header{
+	width: 100%;
+	height: 60px;
+}
+.wrapper .main-content .content-header{
+	width: 100%;
+}
+.navbar-default .navbar-nav>li>a {
+    color: white!important;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color :white;
+
+}
+.navbar-nav {
+     margin: 0 -15px 0 15px;
+ }
+.navbar-nav.navbar-right {
+    margin: 0 -15px 0 -15px;
+}
+.navbar-brand {
+ padding: 0;
+}
+
+
+.header-top-message {
+    background: #89b4da!important;
+    width: 55px;
+    text-align: center;
+}
+.header-top-message:hover {
+    background: #429fdc !important;
+}
+.header-top-person:hover {
+    background: #01b6ad !important;
+}
+
+
+.panel-footer button {
+    margin-left: 10px;
+}
+.panel-heading button{
+    margin-left: 10px;
+}
+
+.panel-heading-self {
+    padding: 5px 15px;
+    height: 40px;
+    line-height: 24px;
+}
+.panel-heading-self button{
+    padding: 3px 15px;
+}
+.controls-radio {
+    padding: 5px 0;
+}
+
+label,.form-control{
+    font-size: 12px;
+}
+.btn{
+    font-size: 14px;
+    padding: 5px 14px;
+}
+.pager li > button {
+    display: inline-block;
+    padding: 5px 14px;
+    border: 1px solid #eeeeee;
+}
+.btn-default{
+    color: #999999;
+}
+.required-start {
+    color: #ff464d;
+    margin-left: 5px;
+}
+

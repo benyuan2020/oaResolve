@@ -1,0 +1,127 @@
+<div class="container-fluid">
+    <!-- START 用户管理-->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">列表查询</div>
+                <div class="panel-body">
+                    <!-- START 用户管理数据查询-->
+                    <!--组织机构-->
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="form-group">
+                                <label>组织机构</label>
+
+                                <div class="controls">
+                                    <input class="form-control" type="hidden" name="organizationId"
+                                           id="params_organizationId"/>
+                                    <input class="form-control" type="text" name="params_organizationName"
+                                           id="params_organizationName" onfocus="loadOrgTree('/midai','params_organization')"/>
+                                </div>
+                            </div>
+                        </div>
+                        <!--登录账号-->
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="form-group">
+                                <label>登录账号</label>
+
+                                <div class="controls">
+                                    <input type="text" class="form-control" name="employeeId">
+                                </div>
+                            </div>
+                        </div>
+                        <!--姓名-->
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="form-group">
+                                <label>姓名</label>
+
+                                <div class="controls">
+                                    <input type="text" class="form-control" name="employeeName">
+                                </div>
+                            </div>
+                        </div>
+                        <!--用户状态-->
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="form-group">
+                                <label>用户状态</label>
+
+                                <div class="controls">
+                                    <select name="account" class="form-control m-b" id="params_activeInd" name="activeInd">
+                                        <option value="">--请选择--</option>
+                                        <option value="">全部</option>
+                                        <option value="1">正常</option>
+                                        <option value="3">删除</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!--是否邮件通知-->
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="form-group">
+                                <label>是否邮件通知</label>
+
+                                <div class="controls">
+                                    <select name="account" class="form-control m-b" name="sendMail" id="params_sendMail">
+                                        <option value="">--请选择--</option>
+                                        <option value="0">不发送</option>
+                                        <option value="1">发送</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer panel-footer-self">
+                    <button type="button" id="sureFind" class="btn btn-default pull-right">重 置</button>
+                    <button type="button" id="search-reset" class="btn btn-green pull-right">查 询</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading panel-heading-self">用户数据管理
+                    <button type="button" data-target="#userList" data-toggle="modal" class="btn btn-green pull-right" data-href="system-user-add.html"
+                            href="#/system-user-add.html/newAdd">添加用户
+                    </button>
+                </div>
+                <div class="panel-body" style="padding: 0">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                            <tr>
+                                <th>登录账号</th>
+                                <th>名称</th>
+                                <th>邮箱</th>
+                                <th>手机号</th>
+                                <th>分机</th>
+                                <th>所属组织机构</th>
+                                <th>创建时间</th>
+                                <th>是否邮件通知</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END 用户数据管理-->
+</div>

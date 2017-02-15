@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<title>OA首页</title>
+   <link rel="stylesheet" type="text/css" href="./static/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="./static/css/bootstrap-table.min.css">
+   <link rel="stylesheet" type="text/css" href="./static/css/font-awesome.min.css">
+   <link rel="stylesheet" type="text/css" href="./static/css/sweetalert.css">
+   <link rel="stylesheet" type="text/css" href="./static/css/bootstrap-datetimepicker.min.css">
+we</head>
+<body>
+	<section class="wrapper">
+		
+		 <nav role="navigation" class="navbar navbar-default navbar-top navbar-fixed-top">
+         
+         <div class="navbar-header">
+            <a href="javascript:void(0);" class="navbar-brand">
+               <div class="brand-logo"><img src="./images/oa-logo.jpg" alt=""/></div>
+               <div class="brand-logo-collapsed"><img src="./images/oa-small-logo.jpg" alt=""/></div>
+            </a>
+         </div>
+         
+         
+         <div class="nav-wrapper">
+            
+            <ul class="nav navbar-nav">
+               <li>
+                  <a href="javascript:void(0);" class="toggle-aside" data-toggle="aside">
+                     <em class="fa fa-list"></em>
+                  </a>
+               </li>
+            </ul>  
+             <ul class="nav navbar-nav navbar-right">
+
+                <li class="dropdown dropdown-list">
+                    <a href="javascript:void(0);" data-toggle="dropdown" data-play="bounceIn" class="dropdown-toggle header-top-message">
+                        <em class="fa fa-envelope"></em>
+
+                        <div class="label label-danger">300</div>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-menu-header">You have 5 new messages</li>
+
+                        <li class="p">
+                            <a href="javascript:void(0);" class="text-center">
+                                <small class="text-primary">READ ALL</small>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li class="dropdown dropdown-list">
+                    <a href="javascript:void(0);" data-toggle="dropdown" data-play="bounceIn" class="dropdown-toggle header-top-message">
+                        <em class="fa fa-bell"></em>
+
+                        <div class="label label-info">120</div>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li>
+
+                            <div class="list-group">
+
+                                <a href="javascript:void(0);" class="list-group-item">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <em class="fa fa-envelope-o fa-2x text-success"></em>
+                                        </div>
+                                        <div class="media-body clearfix">
+                                            <div class="media-heading">Unread messages</div>
+                                            <p class="m0">
+                                                <small>You have 10 unread messages</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="javascript:void(0);" class="list-group-item">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <em class="fa fa-cog fa-2x"></em>
+                                        </div>
+                                        <div class="media-body clearfix">
+                                            <div class="media-heading">New settings</div>
+                                            <p class="m0">
+                                                <small>There are new settings available</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="javascript:void(0);" class="list-group-item">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <em class="fa fa-fire fa-2x"></em>
+                                        </div>
+                                        <div class="media-body clearfix">
+                                            <div class="media-heading">Updates</div>
+                                            <p class="m0">
+                                                <small>There are
+                                                    <span class="text-primary">2</span>new updates available
+                                                </small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="javascript:void(0);" class="list-group-item">
+                                    <small>Unread notifications</small>
+                                    <span class="badge">14</span>
+                                </a>
+                            </div>
+
+                        </li>
+                    </ul>
+
+                </li>
+
+
+                <li class="dropdown">
+                    <a href="javascript:void(0);" data-toggle="dropdown" data-play="bounceIn" class="dropdown-toggle header-top-person"
+                       style="background: #76c7ce;width: 134px;text-align: center;">
+                        刘德华
+                    </a>
+
+                </li>
+
+
+                <li>
+                    <a href="javascript:void(0);" data-toggle="offsidebar" style="background: #f1c95f;width: 100px;text-align: center;">
+                        <em class="fa fa-sign-out"></em> 安全退出
+                    </a>
+                </li>
+
+            </ul>       
+         </div>
+         
+      </nav>
+      
+      
+      <aside class="aside">
+         
+         <nav class="sidebar">
+            <ul class="nav">
+               
+               
+               <li class="active">
+                  <a href="javascript:void(0);" title="首页" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-dashboard"></em>
+                     <div class="label label-danger pull-right">12</div>
+                     <span class="item-text">首页</span>
+                  </a>
+                  
+                  <ul class="nav collapse in">
+                     <li class="active">
+                        <a href="javascript:void(0);" title="Default" class="no-submenu onePageList" data-url="todo-list.html">
+                           <span class="item-text">待办事项</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="javascript:void(0);" title="No Sidebar" class="no-submenu onePageList" data-url="station-letter.html">
+                           <span class="item-text">站内信</span>
+                        </a>
+                     </li>
+                  </ul>
+                  
+               </li>
+               <li>
+                  <a href="javascript:void(0);" title="系统管理" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-bar-chart-o"></em>
+                     <span class="item-text">系统管理</span>
+                  </a>
+                  
+                  <ul class="nav collapse">
+                      <li>
+                          <a href="javascript:void(0);" title="Flot" class="no-submenu onePageList" data-url="system-user-new.html">
+                              <span class="item-text">用户管理</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0);" title="Radial" class="no-submenu onePageList" data-url="system-organize-structural.html">
+                              <span class="item-text">组织机构管理</span>
+                          </a>
+                      </li>
+                     <li>
+                        <a href="javascript:void(0);" title="Flot" class="no-submenu onePageList" data-url="system-role-new.html">
+                           <span class="item-text">角色管理</span>
+                        </a>
+                     </li>
+                  </ul>
+                  
+               </li>
+                <li>
+                  <a href="javascript:void(0);" title="产品部" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-bar-chart-o"></em>
+                     <span class="item-text">产品部</span>
+                  </a>
+                  
+                  <ul class="nav collapse">
+                     <li>
+                        <a href="javascript:void(0);" title="Flot" class="no-submenu onePageList" data-url="product-audit-list.html">
+                           <span class="item-text">待审进件</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="javascript:void(0);" title="Radial" class="no-submenu onePageList" data-url="product-car.html">
+                           <span class="item-text">底层资产</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="javascript:void(0);" title="Radial" class="no-submenu onePageList" data-url="product-asset-package.html">
+                           <span class="item-text">资产包列表</span>
+                        </a>
+                     </li>
+                  </ul>
+                  
+               </li>
+               <li>
+                  <a href="javascript:void(0);" title="Tables" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-table"></em>
+                     <span class="item-text">融资租赁部</span>
+                  </a>
+                  
+                  <ul class="nav collapse">
+                     <li>
+                        <a href="javascript:void(0);" title="Data Table" class="no-submenu onePageList" data-url="lease-audit-list.html">
+                           <span class="item-text">待审进件</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="javascript:void(0);" title="Standard" class="no-submenu onePageList" data-url="lease-product-list.html">
+                           <span class="item-text">进件列表</span>
+                        </a>
+                     </li>
+                     <li>
+                          <a href="javascript:void(0);" title="No Sidebar" class="no-submenu onePageList" data-url="lease-first-car-evaluation.html">
+                              <span class="item-text">一级车评</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0);" title="No Sidebar" class="no-submenu onePageList" data-url="lease-first-car-evaluation-check.html">
+                              <span class="item-text">一级车评回显</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0);" title="No Sidebar" class="no-submenu onePageList" data-url="lease-second-car-evaluation.html">
+                              <span class="item-text">二级车评</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0);" title="No Sidebar" class="no-submenu onePageList" data-url="lease-second-car-evaluation-check.html">
+                              <span class="item-text">二级车评回显</span>
+                          </a>
+                      </li>
+
+                  </ul>
+                  
+               </li>
+               <li>
+                  <a href="javascript:void(0);" title="车贷部" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-edit"></em>
+                     <div class="label label-danger pull-right">new</div>
+                     <span class="item-text">车贷部</span>
+                  </a>
+                  
+                  <ul class="nav collapse">
+                     <li>
+                        <a href="javascript:void(0);" title="Standard" class="no-submenu onePageList" data-url="car-audit-list.html">
+                           <span class="item-text">待审进件</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="javascript:void(0);" title="Extended" class="no-submenu onePageList" data-url="car-product-list.html">
+                           <span class="item-text">进件列表</span>
+                        </a>
+                     </li>
+                  </ul>
+                  
+               </li>
+               <li>
+                  <a href="javascript:void(0);" title="资管部" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-wrench"></em>
+                     <span class="item-text">资管部</span>
+                  </a>
+                  
+                  <ul class="nav collapse">
+                     <li>
+                        <a href="javascript:void(0);" title="Panels" class="no-submenu onePageList">
+                           <span class="item-text">待审进件</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="javascript:void(0);" title="Portlets" class="no-submenu onePageList">
+                           <span class="item-text">进件结算管理</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="javascript:void(0);" title="Buttons" class="no-submenu onePageList">
+                           <span class="item-text">合同管理</span>
+                        </a>
+                     </li>
+                  </ul>
+                  
+               </li>
+               <li>
+                  <a href="javascript:void(0);" title="贷后部" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-file-text"></em>
+                     <div class="label label-danger pull-right">new</div>
+                     <span class="item-text">贷后部</span>
+                  </a>
+                  
+                  <ul class="nav collapse">
+                     <li>
+                        <a href="javascript:void(0);" title="Landing" class="no-submenu onePageList">
+                           <span class="item-text">待审进件</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="javascript:void(0);" title="Login" class="no-submenu onePageList">
+                           <span class="item-text">展期进件列表</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="javascript:void(0);" title="Login Multi" class="no-submenu onePageList">
+                           <span class="item-text">贷后数据列表</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="javascript:void(0);" title="Sign up" class="no-submenu onePageList">
+                           <span class="item-text">还款状态表</span>
+                        </a>
+                     </li>
+                  </ul>
+                  
+               </li>
+               
+            </ul>
+         </nav>
+         
+      </aside>
+         
+         <section class="main-content">
+            <div class="content-header"></div>
+            <div class="content-main"></div>
+         </section>
+	</section>
+
+<script type="text/javascript" src="./static/js/jquery.js"></script>
+<script type="text/javascript" src="./static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./static/js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="./static/js/bootstrap-suggest.min.js"></script>
+<script type="text/javascript" src="./static/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="./static/js/sweetalert.min.js"></script>
+<script type="text/javascript" src="./static/js/formValidation.min.js"></script>
+<script type="text/javascript" src="./static/js/formValidation.bootstrap.min.js"></script>
+</body>
+</html>
