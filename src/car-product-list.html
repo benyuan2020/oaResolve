@@ -1,6 +1,6 @@
 <!-- 车贷进件列表页面 by hyr -->
-<div id="lease-product-list">
-	<script type="text/tmpl" id="lease-product-list-optionTmpl">
+<div id="car-product-list">
+	<script type="text/tmpl" id="car-product-list-optionTmpl">
 		<option value="{{orderId}}" data-type="{{typeId}}">{{userName}}{{updateDate}}</option>
 	</script>
 
@@ -56,8 +56,8 @@
                         </form>
                     </div>
                     <div class="panel-footer panel-footer-self">
-                        <button type="button" id="lease-product-list-sureFind" class="btn btn-default pull-right">重 置</button>
-                        <button type="button" id="lease-product-list-search-reset" class="btn btn-green pull-right">查 询</button>
+                        <button type="button" id="car-product-list-search-reset" class="btn btn-default pull-right">重 置</button>
+                        <button type="button" id="car-product-list-sureFind" class="btn btn-green pull-right">查 询</button>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading panel-heading-self">进件列表
-                        <button type="button" class="btn btn-green pull-right" id="lease-product-list-xjjj-btn">新建进件</button>
+                        <button type="button" class="btn btn-green pull-right" id="car-product-list-xjjj-btn">新建进件</button>
                         <div class="col-lg-3 col-sm-6 pull-right">
                                 <div class="controls">
                                     <select name="account" class="form-control m-b">
@@ -82,40 +82,15 @@
 								id="carProductListTable" data-toggle="table"
 								data-side-pagination="server" data-page-number="1"
 								data-data-type="json" data-pagination="true"
-								data-url="/midai/car/order/businessList.json" data-page-size="12"
-								data-query-params="searchKey" data-page-list="[12,24,36]"
-								data-method="post" data-content-type="application/json"
+								data-page-size="12"
+								data-page-list="[12,24,36]"
+								data-method="get" data-content-type="application/json"
 								data-show-pagination-detail="false" data-pagination-first-text="First"
 								data-pagination-pre-text="上一页" data-pagination-next-text="下一页" 	data-pagination-loop="false">
                                 <thead>
-	                                <tr>
-										<th data-field="orderId" data-align="left"
-                                            style="color: #276cb0">进件编号</th>
-                                        <th data-field="clientName" data-align="left">进件人</th>
-                                        <th data-field="createTime" data-formatter="timeTpye"
-                                            data-align="left" style="color: #276cb0">进件时间</th>
-                                        <th data-field="orderType" data-align="left">进件类型</th>
-                                        <th data-field="state" data-formatter=""
-                                            data-align="left">进件状态</th>
-                                        <th data-field="carType" data-align="left">资质</th>
-                                        <th data-field="note" data-formatter="carNoteFormatter"
-                                            data-align="left">备注</th>
-                                        <th data-formatter="actionFormatter" data-events="actionEvents"
-                                            data-align="left">操作</th>
-									</tr>
+	                               
                                 </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                </tbody>
+                            
                             </table>
                         </div>
                     </div>

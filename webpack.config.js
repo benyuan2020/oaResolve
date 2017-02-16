@@ -132,6 +132,10 @@ var webpackConfig = {
         port: 8090, //默认8080
         inline: true, //可以监控js变化
         hot: true //热启动
+    },
+     watchOptions: {
+        aggregateTimeout: 300,
+        poll: 1000
     }
 }
 
