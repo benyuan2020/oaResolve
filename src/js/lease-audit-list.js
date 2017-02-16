@@ -49,19 +49,19 @@ $table.bootstrapTable({
 			var skipUrl;
 			switch (row.result) {
 				case "url_1":
-					skipUrl = "lease-new-incoming-parts.html";
+					skipUrl = "lease-new-part-add.html";
 					break;
 				case "url_2":
 					skipUrl = "lease-first-audit.html";
 					break;
 				case "url_3":
-					skipUrl = "lease-first-grade-car-comman.html";
+					skipUrl = "lease-first-car-evaluation.html";
 					break;
 				case "url_4":
 					skipUrl = "lease-second-audit.html";
 					break;
 				case "url_5":
-					skipUrl = "lease-second-grade-car-comman.html";
+					skipUrl = "lease-second-car-evaluation.html";
 					break;
 				case "url_6":
 					skipUrl = "lease-expatriate.html";
@@ -98,11 +98,14 @@ $table.bootstrapTable({
 });
 
 
-var searchDate={clientName : ''};
+var searchDate={clientName : '', roleId: ''};
+// 查询点击事件
 $("#lease-audit-list-sureFind").click(function(event) {
 	var clientName = $("#lease-audit-list-jjMan").val();
+	var roleId = $('#lease-audit-list-processRoles').val();
 	searchDate = {
-		clientName : clientName
+		clientName : clientName,
+		roleId: roleId
 	};
 	$table.bootstrapTable("selectPage", 1);
 });
@@ -116,9 +119,10 @@ $("#lease-audit-list input").on("blur",function(){
 // 重置查询条件
 $('#lease-audit-list-search-reset').on('click',function(){
 	$("#lease-audit-list-jjMan").val('');
-	var clientName = $("#lease-audit-list-jjMan").val();
+	$('#lease-audit-list-processRoles').val('');
 	searchDate = {
-		clientName : clientName
+		clientName : '',
+		roleId: ''
 	};
 	$table.bootstrapTable("selectPage", 1);
 });

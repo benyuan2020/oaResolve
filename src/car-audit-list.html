@@ -15,13 +15,34 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="form-group">
                                     <label>进件人</label>
-
                                     <div class="controls">
                                         <input class="form-control" type="text" name="clientName" id="car-audit-list-jjMan"/>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="form-group">
+                                    <label>节点筛选</label>
+                                    <div class="controls">
+                                        <select id="car-audit-list-processRoles" class="form-control m-b">
+                                            <option value="">--所有--</option>
+                                            <option value="64">初审--租赁</option>
+                                            <option value="65">一级车评--租赁</option>
+                                            <option value="66">复审--租赁</option>
+                                            <option value="67">二级车评--租赁</option>
+                                            <option value="68">外访--租赁</option>
+                                            <option value="69">终审--租赁</option>
+                                            <option value="70">风控--租赁</option>
+                                            <option value="71">总经理--租赁</option>
+                                            <option value="72">上传合同--租赁</option>
+                                            <option value="73">合同管理员--租赁</option>
+                                            <option value="79">融资专员--租赁</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        
                     </div>
                     <div class="panel-footer panel-footer-self">
                         <button type="button" id="car-audit-list-sureFind" class="btn btn-default pull-right">重 置</button>
@@ -38,31 +59,14 @@
                         <div class="table-responsive">
                             <table id="carAuditListTable" class="table table-hover table-striped"
 								data-toggle="table" data-side-pagination="server"
-							    data-pagination="true" data-query-params="searchKey" data-page-number="1"
-								data-url="/midai/lease/order/businessList.json" data-page-size="12"
+							    data-pagination="true"  data-page-number="1"
+								data-page-size="12"
 								data-show-pagination-detail="false" data-pagination-first-text="First"
-								data-pagination-pre-text="上一页" data-pagination-next-text="下一页" 	data-pagination-loop="false"
-								data-pagination-last-text="Last" data-page-list="[12,24,36]"
+								data-pagination-pre-text="上一页" data-pagination-next-text="下一页" data-pagination-loop="false" data-pagination-last-text="Last" data-page-list="[12,24,36]"
 								class="table table-hover table-striped table-no-bordered main-table"
-								data-method="post"
-                            >
+								data-method="get">
                                 <thead>
-									<tr>
-										<th data-field="orderId" data-align="left"
-											style="color: #276cb0">进件编号</th>
-										<th data-field="clientName" data-align="left">进件人</th>
-										<th data-field="createTime" data-formatter="timeTpye"
-											data-align="left" style="color: #276cb0">进件时间</th>
-										<th data-field="orderType" data-align="left">进件类型</th>
-										<th data-field="state"
-											data-align="left">进件状态</th>
-										<th data-field="carType" data-align="left">资质</th>
-										<th data-field="note"  data-formatter="leaseNoteFormatter"
-											data-align="left">备注</th>
-										<th data-field=""
-											data-formatter="actionFormatter" data-events="actionEvents"
-											data-align="left">操作</th>
-									</tr>
+							
 								</thead>
                             </table>
                         </div>

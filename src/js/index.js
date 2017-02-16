@@ -57,7 +57,8 @@ var oaRoute = new OPRouter({
 	]
 });
 
-module.exports = oaRoute;
+window.oaRoute = oaRoute;
+
 
 
 // 首页添加路由插件

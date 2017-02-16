@@ -1,8 +1,8 @@
-var $table  = $('#leaseProductListTable');
-var isFirstEnter = 0;
+var $LeaseProductListtable  = $('#leaseProductListTable');
+var isFirstEnter = false;
 
-$table.bootstrapTable({
-    url: '../static/json/lease-product-list-data.json',/*/midai/system/message/list.json*/
+$LeaseProductListtable.bootstrapTable({
+    url: '../static/json/lease-product-list-data.json',
     queryParams: function(args) {
 		if(isFirstEnter){
 			if(localStorage.getItem('lease-list-limit')){
@@ -12,10 +12,10 @@ $table.bootstrapTable({
 				args.clientName = sessionStorage.getItem('lease-list-clientName');
 				args.idNum = sessionStorage.getItem('lease-list-idNum');
 				args.phone = sessionStorage.getItem('lease-list-phone');
-				$('[name="orderId"]').val(args.orderId);
-				$('[name="clientName"]').val(args.clientName);
-				$('[name="idNum"]').val(args.idNum);
-				$('[name="phone"]').val(args.phone);
+				$('#lease-product-list input[name="orderId"]').val(args.orderId);
+				$('#lease-product-list input[name="clientName"]').val(args.clientName);
+				$('#lease-product-list input[name="idNum"]').val(args.idNum);
+				$('#lease-product-list input[name="phone"]').val(args.phone);
 
 			}else{
 				args.limit = 12;
@@ -29,16 +29,16 @@ $table.bootstrapTable({
 		}else{
 			localStorage.setItem('lease-list-limit',args.limit);
 			sessionStorage.setItem('lease-list-offset',args.offset);
-			sessionStorage.setItem('lease-list-orderId',$('[name = "orderId"]').val());
-			sessionStorage.setItem('lease-list-clientName',$('[name = "clientName"]').val());
-			sessionStorage.setItem('lease-list-idNum',$('[name = "idNum"]').val());
-			sessionStorage.setItem('lease-list-phone',$('[name = "phone"]').val());
+			sessionStorage.setItem('lease-list-orderId',$('#lease-product-list input[name="orderId"]').val());
+			sessionStorage.setItem('lease-list-clientName',$('#lease-product-list input[name="clientName"]').val());
+			sessionStorage.setItem('lease-list-idNum',$('#lease-product-list input[name="idNum"]').val());
+			sessionStorage.setItem('lease-list-phone',$('#lease-product-list input[name="phone"]').val());
 			args.limit = Number(localStorage.getItem('lease-list-limit'));
 			args.offset = Number(sessionStorage.getItem('lease-list-offset'));
-			args.orderId = $('[name = "orderId"]').val();
-			args.clientName = $('[name = "clientName"]').val();
-			args.idNum = $('[name = "idNum"]').val();
-			args.phone = $('[name = "phone"]').val();
+			args.orderId = $('#lease-product-list input[name = "orderId"]').val();
+			args.clientName = $('#lease-product-list input[name = "clientName"]').val();
+			args.idNum = $('#lease-product-list input[name = "idNum"]').val();
+			args.phone = $('#lease-product-list input[name = "phone"]').val();
 		}
 		return args;
 	},
@@ -98,50 +98,47 @@ $table.bootstrapTable({
 				arr = '<a class="btn btn-default" default style="color:#fff;" href="javascript:void(0);" title="查看">' + str + '</a>';
 			}
 			return arr;
-		},
-		events: function(){
-
 		}
     }]
 });
 
 //草稿list请求
-	$.ajax({
-		url : "/midai/lease/order/loadDraftsList.json",
-		method : "post",
-		success : function(res) {
-			var tmpl = $('#optionTmpl').html();
-			for(var i = 0 ; i < res.length ; i++){
-				var nameLen = res[i].userName.length;
-				var userName =res[i].userName;
-				for(var j = 0 ;j < (5-nameLen)*4;j++){
-					userName += '&nbsp;';
-				}
-				var option = tmpl.replace(/\{\{orderId\}\}/g,res[i].orderId).replace(/\{\{updateDate\}\}/g,res[i].updateDate).replace(/\{\{userName\}\}/g,userName).replace(/\{\{typeId\}\}/g,res[i].typeId);
-				$('#lease-product-list-traftsList').append(option);
-			}
-		}
-	});
+	// $.ajax({
+	// 	url : "/midai/lease/order/loadDraftsList.json",
+	// 	method : "post",
+	// 	success : function(res) {
+	// 		var tmpl = $('#lease-product-list-optionTmpl').html();
+	// 		for(var i = 0 ; i < res.length ; i++){
+	// 			var nameLen = res[i].userName.length;
+	// 			var userName =res[i].userName;
+	// 			for(var j = 0 ;j < (5-nameLen)*4;j++){
+	// 				userName += '&nbsp;';
+	// 			}
+	// 			var option = tmpl.replace(/\{\{orderId\}\}/g,res[i].orderId).replace(/\{\{updateDate\}\}/g,res[i].updateDate).replace(/\{\{userName\}\}/g,userName).replace(/\{\{typeId\}\}/g,res[i].typeId);
+	// 			$('#lease-product-list-traftsList').append(option);
+	// 		}
+	// 	}
+	// });
 	//进入草稿界面
-	$('#lease-product-list-traftsList').on('change',function(){
-		var orderId = $(this).val();
-		var typeId = $(this).find('option:selected').data('type');
-		if(typeId == 3){
-			// 打开新页面
-			// window.location.hash = '/lease-new-incoming-trafts.html/world/'+orderId+'/url_1';
-		}else if(typeId == 4){
-			//用路由插件打开新页面
+	// $('#lease-product-list-traftsList').on('change',function(){
+	// 	var orderId = $(this).val();
+	// 	var typeId = $(this).find('option:selected').data('type');
+	// 	if(typeId == 3){
+	// 		// 打开新页面
+	// 		// window.location.hash = '/lease-new-incoming-trafts.html/world/'+orderId+'/url_1';
+	// 	}else if(typeId == 4){
+	// 		//用路由插件打开新页面
 
-			// window.location.hash = '/lease-first-grade-car-comman-trafts.html/world/'+orderId+'/url_3';
-		}
-	});
+	// 		// window.location.hash = '/lease-first-grade-car-comman-trafts.html/world/'+orderId+'/url_3';
+	// 	}
+	// });
 
 	$(document).on('click','#lease-product-list-sureFind',function(){
-		$table.bootstrapTable('selectPage',1)
+		$LeaseProductListtable.bootstrapTable('selectPage',1)
 	});
 	$(document).on('click','#lease-product-list-search-reset',function(){
 		$('#lease-product-list-toolbar input').val('');
-		$table.bootstrapTable('selectPage',1)
+		$LeaseProductListtable.bootstrapTable('selectPage',1)
 	});
 	//去除input内容复制有空格问题
 	$("#lease-product-list input").on("blur",function(){
@@ -150,9 +147,13 @@ $table.bootstrapTable({
 	});
 	// 新建进件按钮
 	$("#lease-product-list-xjjj-btn").click(function() {
+		debugger;
 		WORKFLOW = "url_1";
 		// 用路由打开新页面
-
+		oaRoute.openNewPage({
+			targetUrl: 'lease-new-part-add.html',
+			data: 'page=1'
+		})
 
 
 		// $('#lease_xjjj_btn').attr('href',"#/lease-new-incoming-parts.html/world/onlyOne/onlyOne/"+WORKFLOW+"/lease-new-incoming-parts.html/empty");

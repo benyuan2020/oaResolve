@@ -1,0 +1,113 @@
+{
+  "total": 43,
+  "rows": [
+    {
+      "roleId": 111,
+      "roleName": "POSTLOAN_ACCOUNT_OFFICER",
+      "description": "平账专员",
+      "system": 0,
+      "systemDesc": "业务角色",
+      "createTime": "2016-11-30",
+      "updateTime": "2016-11-30"
+    },
+    {
+      "roleId": 109,
+      "roleName": "ZIGUAN_CONTRACT_MANAGER",
+      "description": "资管合同管理员",
+      "system": 0,
+      "systemDesc": "业务角色",
+      "createTime": "2016-11-01",
+      "updateTime": "2016-11-04"
+    },
+    {
+      "roleId": 108,
+      "roleName": "POSTLOAN_AUDIT",
+      "description": "审核员",
+      "system": 0,
+      "systemDesc": "业务角色",
+      "createTime": "2016-10-31",
+      "updateTime": "2016-10-31"
+    },
+    {
+      "roleId": 107,
+      "roleName": "POSTLOAN_APPLY",
+      "description": "贷后申请员",
+      "system": 0,
+      "systemDesc": "业务角色",
+      "createTime": "2016-10-31",
+      "updateTime": "2016-10-31"
+    },
+    {
+      "roleId": 104,
+      "roleName": "POSTLOAN_VISITOR",
+      "description": "贷后访客",
+      "system": 0,
+      "systemDesc": "业务角色",
+      "createTime": "2016-09-13",
+      "updateTime": "2016-09-13"
+    },
+    {
+      "roleId": 103,
+      "roleName": "POSTLOAN_RISK",
+      "description": "贷后风控",
+      "system": 0,
+      "systemDesc": "业务角色",
+      "createTime": "2016-09-13",
+      "updateTime": "2016-09-13"
+    },
+    {
+      "roleId": 102,
+      "roleName": "POSTLOAN_ER",
+      "description": "贷后专员",
+      "system": 0,
+      "systemDesc": "业务角色",
+      "createTime": "2016-09-12",
+      "updateTime": "2016-09-13"
+    },
+    {
+      "roleId": 101,
+      "roleName": "POSTLOAN_CASHIER",
+      "description": "贷后出纳",
+      "system": 0,
+      "systemDesc": "业务角色",
+      "createTime": "2016-09-12",
+      "updateTime": "2016-09-13"
+    },
+    {
+      "roleId": 100,
+      "roleName": "LEASE_CUSTOMER_MANGER",
+      "description": "客户经理--融资",
+      "system": 0,
+      "systemDesc": "业务角色",
+      "createTime": "2016-08-16",
+      "updateTime": "2016-08-16"
+    },
+    {
+      "roleId": 99,
+      "roleName": "CUSTOMER_MANGER",
+      "description": "客户经理--车贷",
+      "system": 0,
+      "systemDesc": "业务角色",
+      "createTime": "2016-08-16",
+      "updateTime": "2016-08-16"
+    },
+    {
+      "roleId": 98,
+      "roleName": "LEAS_BUSSINESS_DIRECTOR",
+      "description": "业务主管--融资",
+      "system": 0,
+      "systemDesc": "业务角色",
+      "createTime": "2016-08-16",
+      "updateTime": "2016-08-16"
+    },
+    {
+      "roleId": 97,
+      "roleName": "BUSSINESS_DIRECTOR",
+      "description": "业务主管--车贷",
+      "system": 0,
+      "systemDesc": "业务角色",
+      "createTime": "2016-08-16",
+      "updateTime": "2016-08-16"
+    }
+  ]
+}

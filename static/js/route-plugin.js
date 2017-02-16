@@ -7,25 +7,6 @@
 */
 
 (function(window){
-	// jQuery.extend({
-	// 	load: function(htmlUrl, callback){
-	// 		if(!htmlUrl){
-	// 			return;
-	// 		}
-	// 		console.log("127.0.0.1:8090/src/"+htmlUrl)
-	// 		var that = this;
-	// 		$.ajax({
-	// 			url: "127.0.0.1:8090/src/"+htmlUrl,
-	// 			type:"get",
-	// 			success: function(res){
-	// 				that.html(res);
-	// 				if(typeof callback === "function"){
-	// 					callback();
-	// 				}
-	// 			} 
-	// 		})
-	// 	}
-	// })
 	function OnePage(args){
 		var _menuItemList =args.routes;
 		var HOST = "";
