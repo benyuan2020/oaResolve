@@ -31,6 +31,7 @@ var webpackConfig = {
         // 'sweetalert': path.resolve(__dirname, './static/js/sweetalert.min'),
         // 'formvalidation': path.resolve(__dirname, './static/js/formValidation.min'),
         // 'formvalidationBootstrap': path.resolve(__dirname, './static/js/formValidation.bootstrap.min')
+        // 'common': path.resolve(__dirname, './static/js/common')
     }
   },
   module: {
@@ -92,7 +93,7 @@ var webpackConfig = {
     new webpack.BannerPlugin('This file is created by doudou'),
     // new ExtractTextPlugin('styles.css')
     new ExtractTextPlugin('static/css/[name].css'),
-    // new webpack.optimize.CommonsChunkPlugin({name: "commons", filename: "js/commons.js"}),
+    // new webpack.optimize.CommonsChunkPlugin({name: "commons", filename: "static/js/commons.js"}),
     new webpack.HotModuleReplacementPlugin(), //热加载(模块热替换(HMR)交换, 添加, 或者删除模块, 同时应用持续运行, 不需要 页面刷新.)
     new webpack.optimize.UglifyJsPlugin({
       output: {
@@ -101,8 +102,9 @@ var webpackConfig = {
       }
     })
     // ,
+    // // ,
     // new webpack.optimize.CommonsChunkPlugin({
-    //   name: 'vendor',
+    //   name: 'common',
     //   minChunks: function (module, count) {
     //     // any required modules inside node_modules are extracted to vendor
     //     return (
@@ -118,7 +120,7 @@ var webpackConfig = {
     // // prevent vendor hash from being updated whenever app bundle is updated
     // new webpack.optimize.CommonsChunkPlugin({
     //   name: 'manifest',
-    //   chunks: ['vendor']
+    //   chunks: ['common']
     // })
 
   ],
