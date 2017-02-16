@@ -528,6 +528,28 @@ body {
     }
 }
 
+@media only screen  and (max-width: 768px) {
+    .navbar-top .navbar-header .brand-logo {
+        display: none
+    }
+    .navbar-top .navbar-header .brand-logo-collapsed {
+        display: block
+    }
+    .aside-toggled .navbar-top .navbar-header {
+        width: 70px;
+        background: #a6c8e4;
+    }
+    .navbar-nav  {
+        margin: 0 -15px!important;
+    }
+    .navbar-default{
+        background: #a6c8e4;
+    }
+    .aside-toggled .navbar-top .navbar-form {
+        left: 70px
+    }
+}
+
 .sidebar {
     background-color: #fff;
     height: 100%;
@@ -549,6 +571,7 @@ body {
 .sidebar .nav > li > a {
     padding: 16px 30px;
     color: #777f86;
+    font-size: 14px!important;
     font-weight: 700;
     letter-spacing: .025em;
     -webkit-transition: all .2s ease;
@@ -591,7 +614,7 @@ body {
 .sidebar .nav .nav > li > a {
     position: relative;
     padding: 15px 30px 15px 60px;
-    font-size: 13px;
+    font-size: 14px;
     background-color: transparent!important;
     font-weight: 400;
     border-right:none;
@@ -600,7 +623,7 @@ body {
 .sidebar .nav .nav > li.active > a
 {
     color: #429fdc;
-   margin-left: 40px;
+   margin-left: 20px;
 }
 .sidebar .nav .nav > li.active > a:hover
 {
