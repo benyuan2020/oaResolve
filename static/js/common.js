@@ -139,6 +139,119 @@ jQuery.fn.extend({
      }
 });
 
+// 调用公共方法的时候请使用oaRouteUtil.<functionName>
+var oaRouteUtil = {
+  outputdollars : function(number) {
+    // 钱数格式化
+      var signFlag = "";
+        var numberStr=""+number;
+        if(numberStr.substr(0,1) == "-"){
+          signFlag = "-";
+          numberStr = numberStr.substr(1);
+        }
+        var numberLastStr = "";
+        if(numberStr.match(/\./)){
+            numberStr = numberStr.split(".");
+            numberLastStr = "."+numberStr[1];
+            numberStr = numberStr[0];
+        }
+        else{
+           numberStr = numberStr;
+        }
+        if (numberStr.length <= 3){
+          numberStr = (numberStr == '' ? '0' : numberStr + numberLastStr);
+            return (signFlag + numberStr);
+      }
+        else {
+          var mod = numberStr.length % 3;
+          var output = (mod == 0 ? '' : (numberStr.substring(0, mod)));
+          for (i = 0; i < Math.floor(numberStr.length / 3); i++) {
+            if ((mod == 0) && (i == 0))
+              output += numberStr.substring(mod + 3 * i, mod + 3 * i + 3);
+            else
+              output += ',' + numberStr.substring(mod + 3 * i, mod + 3 * i + 3);
+          }
+          return (signFlag + output+""+numberLastStr);
+        }
+    },
+    formatMoney : function(s, n)  
+      {  
+        // 格式化钱的
+
+           var s=""+s;
+           if(s === "" || s === undefined || s === null){
+            return "";
+           }
+          var signFlag = "";
+          if(s.substr(0,1) == "-"){
+            signFlag = "-";
+                s = s.substr(1);
+          }
+         n = n > 0 && n <= 20 ? n : 2;  
+         s = parseFloat((s + "").replace(/[^\d\.-]/g, "")).toFixed(n) + "";  
+         var l = s.split(".")[0].split("").reverse(),  
+         r = s.split(".")[1];  
+         t = "";  
+         for(i = 0; i < l.length; i ++ )  
+         {  
+            t += l[i] + ((i + 1) % 3 == 0 && (i + 1) != l.length ? "," : "");  
+         }  
+         return signFlag+t.split("").reverse().join("") + "." + r;  
+      },
+    clickDisappearSwal : function(text, callback){
+      // 只有确定，点击消失
+      swal({
+                title : "<h5 style='font-size:20px;font-family: 微软雅黑;font-weight: 400;'>提示</h5>",
+                text : '<p style="font-family:微软雅黑 ">'+text+'</p>' ,
+                confirmButtonText:"确定",
+                showConfirmButton : true
+            },function(){
+              if(callback){
+                callback();
+              }
+              else{
+                return;
+              }
+              
+            })
+    },
+    autoDisappearSwal : function(text, callback){
+      // 没有确定按钮
+      swal({
+                title: '<h5 style="font-size:20px;font-family: 微软雅黑;font-weight: 400">提示</h5>',
+                text: '<p style="font-family:微软雅黑 ">'+text+'</p>' ,
+                showConfirmButton : false,
+                timer:1000,
+                html:true
+            });
+            if(callback){
+              setTimeout(function(){
+                callback();
+              }, 1000)
+            }
+    },
+    normalSwal : function(text, callback){
+      // 有确定和取消按钮的点击消失的方法
+      swal({
+            title: '<h5 style="font-size:20px;font-family: 微软雅黑;font-weight: 400">提示</h5>',
+            text: '<p style="font-family:微软雅黑 ">'+text+'</p>' ,
+            showCancelButton: true,
+            confirmButtonText:"确定",
+            cancelButtonText: "取消",
+            html:true
+        },function(){
+          if(callback){
+            callback();
+          }
+          else{
+            return;
+          }
+          
+        })
+    }
+}
+
+
 
 // 全局配置
 $.ajaxSetup({
