@@ -98,5 +98,54 @@ jQuery.fn.extend({
             }
           }
       });
-   }
+   },
+    // 表单提交序列化
+    form2json:function(params){
+        var selector=params.form;
+        var values= $(selector).serializeArray();
+        var obj={};
+        for (var index = 0; index < values.length; ++index)
+        {
+            var temp=obj; //上一级
+            var n=values[index].name;
+            if(n.indexOf(".")>-1){
+                var arr=n.split(".");
+                for(var i=0;i<arr.length-1;i++){
+                    if(arr[i].indexOf("[")>-1){
+                        var a=arr[i].substring(0,arr[i].indexOf("["));
+                        temp[a]=temp[a]||[];
+                        var y=arr[i].substring(arr[i].indexOf("[")+1,arr[i].indexOf("]"));
+                        temp[a][y]=temp[a][y]||{};
+                        temp=temp[a][y];
+                    }else{
+                        temp[arr[i]]=temp[arr[i]] || {};
+                        temp=temp[arr[i]];
+                    }
+                }
+                // console.log(n);
+                if($("input[name='"+n+"']").data("money") && $("input[name='"+n+"']").data("money") == "money"){
+                    values[index].value = values[index].value.replace(/,/g,"");
+                }
+                temp[arr[arr.length-1]]=values[index].value;
+            }else{
+                if(obj[n] !==undefined && obj[n]!=null){
+                    if( !$.isArray(obj[n])){
+                        var v=obj[n];
+                        obj[n]=[];
+                        obj[n].push(v);
+                    }
+                    if($("input[name='"+n+"']").data("money") && $("input[name='"+n+"']").data("money") == "money"){
+                        values[index].value = values[index].value.replace(/,/g,"");
+                    }
+                    obj[n].push(values[index].value);
+                }else{
+                    if($("input[name='"+n+"']").data("money") && $("input[name='"+n+"']").data("money") == "money"){
+                        values[index].value = values[index].value.replace(/,/g,"");
+                    }
+                    obj[n]=values[index].value;
+                }
+            }
+        }
+        return obj;
+    }
 });

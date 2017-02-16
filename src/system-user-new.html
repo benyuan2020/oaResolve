@@ -12,12 +12,12 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="form-group">
                                     <label>组织机构</label>
-
                                     <div class="controls">
                                         <input class="form-control" type="hidden" name="organizationId"
                                                id="params_organizationId"/>
                                         <input class="form-control" type="text" name="params_organizationName"
-                                               id="params_organizationName" onfocus="loadOrgTree('/midai','params_organization')"/>
+                                               id="user_organizationName"/>
+                                        <!---->
                                     </div>
                                 </div>
                             </div>
@@ -108,3 +108,31 @@
     </div>
     <!-- END 用户数据管理-->
 </div>
+
+<!-- Modal2 -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">&times;</button>
+                <h4 class="modal-title">组织机构树</h4>
+            </div>
+
+            <div class="modal-body">
+                <ul id="user-new-trees" class="ztree"></ul>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary"
+                        style="background-color: rgb(221, 107, 85); border: 0px;"
+                        onclick="clearOption()" id="clearOption">清空选项</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button data-dismiss="modal" class="btn btn-primary" type="button"
+                        id="closeModal" style="background-color: #b9b9b9; border: 0px;">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal -->

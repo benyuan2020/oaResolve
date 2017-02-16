@@ -237,7 +237,6 @@ body {
 }
 
 .wrapper > section {
-    position: relative;
     background-color: #eef0f4;
     min-height: 100%;
     z-index: 11;
