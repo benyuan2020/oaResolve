@@ -23,7 +23,9 @@ var routePath = [
     "lease-audit-list",
     "lease-product-list",
     "car-audit-list",
-    "car-product-list"
+    "car-product-list",
+    "dhb-ds",
+    "zgb-ds"
 
 ]
 module.exports = routePath;

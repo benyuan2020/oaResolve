@@ -51,7 +51,9 @@ var oaRoute = new OPRouter({
 		{"url":"lease-audit-list.html","title":"待审进件-融资"},
 		{"url":"lease-product-list.html","title":"进件列表-融资"},
 		{"url":"car-audit-list.html","title":"待审进件-车贷"},
-		{"url":"car-product-list.html","title":"进件列表-车贷"}
+		{"url":"car-product-list.html","title":"进件列表-车贷"},
+		{"url":"dhb-ds.html","title":"待审进件-贷后"},
+		{"url":"zgb-ds.html","title":"待审进件-资管"}
 	]
 });
 
