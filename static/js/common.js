@@ -139,8 +139,8 @@ jQuery.fn.extend({
      }
 });
 
-// 调用公共方法的时候请使用oaRouteUtil.<functionName>
-var oaRouteUtil = {
+// UTIL.<functionName>
+var UTIL = {
   outputdollars : function(number) {
     // 钱数格式化
       var signFlag = "";
@@ -259,7 +259,7 @@ $.ajaxSetup({
   contentType:"application/json",
   dataType:"json",
   error: function(xhr, textStatus, errorThrown) {
-    hideLoading();
+    // hideLoading();
     if(xhr.responseText.length > 200){
       msg = "系统出错，请联系管理员！";
       UTIL.clickDisappearSwal(msg);
