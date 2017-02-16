@@ -309,7 +309,16 @@
 					// 手动执行打开新页面的方法的时候执行的事件
 			function _openNewPage(obj){
 				var targetUrl = obj.targetUrl;
-				var data = obj.data;
+				var data = "";
+				if(typeof (obj.data) == "object"){
+					var myArr = [];
+					for(var attr in obj.data){
+						myArr.push(attr + "=" + obj.data[attr])
+					}
+					data = myArr.join('&')
+				}else{
+					 data = obj.data;
+				}
 				var urlStr = "";
 				that.default.changeFlag = 1;
 				that.initCurrentPageStyle();
