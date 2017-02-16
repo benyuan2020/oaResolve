@@ -105,42 +105,42 @@ $table.bootstrapTable({
     }]
 });
 
-//草稿list请求
-	$.ajax({
-		url : "/midai/car/order/loadDraftsList.json",
-		method : "post",
-		success : function(res) {
-			var tmpl = $('#car-product-list-optionTmpl').html();
-			for(var i = 0 ; i < res.length ; i++){
-				var nameLen = res[i].userName.length;
-				var userName =res[i].userName;
-				for(var j = 0 ;j < (5-nameLen)*4;j++){
-					userName += '&nbsp;';
-				}
-				var option = tmpl.replace(/\{\{orderId\}\}/g,res[i].orderId).replace(/\{\{updateDate\}\}/g,res[i].updateDate).replace(/\{\{userName\}\}/g,userName).replace(/\{\{typeId\}\}/g,res[i].typeId);
-				$('#car-product-list-traftsList').append(option);
-			}
-		}
-	});
-	//进入草稿界面
-	$('#car-product-list-traftsList').on('change',function(){
-		var orderId = $(this).val();
-		var typeId = $(this).find('option:selected').data('type');
-		if(typeId == 3){
-			// 打开新页面
-			// window.location.hash = '/car-new-incoming-trafts.html/world/'+orderId+'/url_1';
-		}else if(typeId == 4){
-			//用路由插件打开新页面
+// //草稿list请求
+// 	$.ajax({
+// 		url : "/midai/car/order/loadDraftsList.json",
+// 		method : "post",
+// 		success : function(res) {
+// 			var tmpl = $('#car-product-list-optionTmpl').html();
+// 			for(var i = 0 ; i < res.length ; i++){
+// 				var nameLen = res[i].userName.length;
+// 				var userName =res[i].userName;
+// 				for(var j = 0 ;j < (5-nameLen)*4;j++){
+// 					userName += '&nbsp;';
+// 				}
+// 				var option = tmpl.replace(/\{\{orderId\}\}/g,res[i].orderId).replace(/\{\{updateDate\}\}/g,res[i].updateDate).replace(/\{\{userName\}\}/g,userName).replace(/\{\{typeId\}\}/g,res[i].typeId);
+// 				$('#car-product-list-traftsList').append(option);
+// 			}
+// 		}
+// 	});
+// 	//进入草稿界面
+// 	$('#car-product-list-traftsList').on('change',function(){
+// 		var orderId = $(this).val();
+// 		var typeId = $(this).find('option:selected').data('type');
+// 		if(typeId == 3){
+// 			// 打开新页面
+// 			// window.location.hash = '/car-new-incoming-trafts.html/world/'+orderId+'/url_1';
+// 		}else if(typeId == 4){
+// 			//用路由插件打开新页面
 
-			// window.location.hash = '/car-first-grade-car-comman-trafts.html/world/'+orderId+'/url_3';
-		}
-	});
+// 			// window.location.hash = '/car-first-grade-car-comman-trafts.html/world/'+orderId+'/url_3';
+// 		}
+// 	});
 
 	$(document).on('click','#car-product-list-sureFind',function(){
 		$table.bootstrapTable('selectPage',1)
 	});
 	$(document).on('click','#car-product-list-search-reset',function(){
-		$('#car-product-list-toolbar input').val('');
+		document.getElementById('car-product-list-query-form').reset();
 		$table.bootstrapTable('selectPage',1)
 	});
 	//去除input内容复制有空格问题
@@ -152,7 +152,10 @@ $table.bootstrapTable({
 	$("#car-product-list-xjjj-btn").click(function() {
 		WORKFLOW = "url_1";
 		// 用路由打开新页面
-
+		oaRoute.openNewPage({
+			targetUrl: 'car-new-part-add.html',
+			data: 'page=1'
+		})
 
 
 		// $('#car_xjjj_btn').attr('href',"#/car-new-incoming-parts.html/world/onlyOne/onlyOne/"+WORKFLOW+"/car-new-incoming-parts.html/empty");
